@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Writer's Spectrum – Poetry</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>The Writer's Spectrum – Poetry</h1>
+        </div>
+
+        <!-- search + user area -->
+        <div class="nav-actions">
+          <input id="search-input" type="search" placeholder="Search poems by title or author..." />
+          <div id="user-area">
+            <button id="login-btn" class="small-btn">Login</button>
+            <button id="register-btn" class="small-btn">Register</button>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#poetry">Poetry</a>
+          <a href="#upload">Upload</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to The Writer's Spectrum</h2>
+      <p>Your space to read, share, and rate inspiring poetry.</p>
+      <button id="explore-btn" class="cta-button">Explore Poetry</button>
+    </div>
+  </section>
+
+  <!-- POETRY SECTION (ONLY GENRE) -->
+  <section id="poetry" class="categories">
+    <h2>Poetry</h2>
+
+    <div id="poetry-grid" class="works-grid"></div>
+  </section>
+
+  <!-- UPLOAD -->
+  <section id="upload" class="upload">
+    <h2>Share Your Poem</h2>
+    <form id="upload-form" class="upload-form">
+      <div class="form-group">
+        <label for="work-title">Title</label>
+        <input type="text" id="work-title" required />
+      </div>
+      <div class="form-group">
+        <label for="work-author">Author Name (optional)</label>
+        <input type="text" id="work-author" />
+      </div>
+
+      <div class="form-group">
+        <label for="work-content">Poem</label>
+        <textarea id="work-content" rows="8" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="work-cover">Cover Image (URL)</label>
+        <input type="url" id="work-cover" />
+      </div>
+
+      <button type="submit" class="submit-button">Upload Poem</button>
+    </form>
+  </section>
+
+  <!-- WORK VIEWER MODAL -->
+  <div id="work-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-details"></div>
+    </div>
+  </div>
+
+  <!-- LOGIN / REGISTER MODAL -->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content auth-content">
+      <span class="close-auth">&times;</span>
+
+      <div id="auth-forms">
+        <!-- Login form -->
+        <div id="login-form" class="auth-form">
+          <h2>Login</h2>
+          <label for="login-username">Username</label>
+          <input id="login-username" type="text" />
+          <label for="login-password">Password</label>
+          <input id="login-password" type="password" />
+          <button id="login-submit" class="submit-button">Login</button>
+        </div>
+
+        <!-- Register form -->
+        <div id="register-form" class="auth-form" style="display:none;">
+          <h2>Register</h2>
+          <label for="reg-username">Username</label>
+          <input id="reg-username" type="text" />
+          <label for="reg-password">Password</label>
+          <input id="reg-password" type="password" />
+          <button id="register-submit" class="submit-button">Register</button>
+        </div>
+
+        <p class="auth-switch">
+          <small id="auth-switcher">
+            Don't have an account?
+            <a href="#" id="to-register">Register</a>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 The Writer's Spectrum – Poetry Edition.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
